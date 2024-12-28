@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur Wigo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="cursor-glow"></div>
+    <div class="confetti">
+        <div class="inner-flex">
+            <h4>🎉</h4>
+        </div>
+    </div>
+
+    <nav id="table-of-contents">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>      
+
+      <div class="content">
+        <div id="about" class="section">
+          <div id="about-container">
+            <img class="profile-picture" src="Example.png" alt="Arthur's Profile Picture">
+            <div class="about-content">
+                <h2 class="about-title">Hi! I'm Arthur</h2>
+                <p class="about-description" style="animation: textEnter2 0.8s cubic-bezier(0.4, 0, 0.2, 1) 3s forwards">Welcome to my corner of the internet!</p>
+                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 5s forwards">Currently studying @ <span class="highlight-gold">UC Berkeley</span></p>
+                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 6s forwards">I'm a computer science student passionate about AI and software engineering. Let’s connect!</p>
+                <ul class="social-links" style="opacity: 0; animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 7s forwards">
+                    <li><a href="https://www.linkedin.com/in/arthur-wigo-2235062aa/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/arthurlw" target="_blank">GitHub</a></li>
+                    <li><a href="#" onclick="copyEmail()">Email</a></li>
+                    <li><a href="#" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        </div>
+        <div id="toast" class="toast">Email copied to clipboard!</div>
+
+        <div id="skills" class="section">
+          <div class="skills-wrapper">
+            <div id="skills-display-1" class="skills-container">
+              <div class="blue-circle"></div>
+              <div class="skewed-strip">
+                <div class="conveyor-container">
+                  <div class="box-track">
+                    <div class="box conveyer"><img src="Icons/html.png" alt="Html"></div>
+                    <div class="box conveyer"><img src="Icons/css.png" alt="CSS"></div>
+                    <div class="box conveyer"><img src="Icons/typescript.png" alt="Typescript"></div>
+                    <div class="box conveyer"><img src="Icons/angular.png" alt="Angular"></div>
+                    <div class="box conveyer"><img src="Icons/swift.png" alt="Swift"></div>
+                    <div class="box conveyer"><img src="Icons/github.png" alt="GitHub"></div>
+                    <div class="box conveyer"><img src="Icons/python.png" alt="Python"></div>
+                    <div class="box conveyer"><img src="Icons/cplusplus.png" alt="C++"></div>
+                    <div class="box conveyer"><img src="Icons/spring.png" alt="Spring"></div>
+                    <div class="box conveyer"><img src="Icons/sql.png" alt="SQL"></div>
+                    <div class="box conveyer"><img src="Icons/html.png" alt="Html"></div>
+                    <div class="box conveyer"><img src="Icons/css.png" alt="CSS"></div>
+                    <div class="box conveyer"><img src="Icons/typescript.png" alt="Typescript"></div>
+                    <div class="box conveyer"><img src="Icons/angular.png" alt="Angular"></div>
+                    <div class="box conveyer"><img src="Icons/swift.png" alt="Swift"></div>
+                    <div class="box conveyer"><img src="Icons/github.png" alt="GitHub"></div>
+                    <div class="box conveyer"><img src="Icons/python.png" alt="Python"></div>
+                    <div class="box conveyer"><img src="Icons/cplusplus.png" alt="C++"></div>
+                    <div class="box conveyer"><img src="Icons/spring.png" alt="Spring"></div>
+                    <div class="box conveyer"><img src="Icons/sql.png" alt="SQL"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="yellow-circle">
+                <span>What I do</span>
+              </div>
+            </div>
+
+            <div id="skills-display-2" class="box skill" style="display: none;">
+              <h2 class="regular-large" style="font-size:2.2rem"><span class="highlight-gold">What I do</span></h2>
+              <p class="regular-desc" style="line-height: 2.5rem;">Always striving to learn more</p>
+              <div class="box icon"><img src="Icons/html.png" alt="Html"></div>
+              <div class="box icon"><img src="Icons/css.png" alt="CSS"></div>
+              <div class="box icon"><img src="Icons/typescript.png" alt="Typescript"></div>
+              <div class="box icon"><img src="Icons/angular.png" alt="Angular"></div>
+              <div class="box icon"><img src="Icons/swift.png" alt="Swift"></div>
+              <div class="box icon"><img src="Icons/github.png" alt="GitHub"></div>
+              <div class="box icon"><img src="Icons/python.png" alt="Python"></div>
+              <div class="box icon"><img src="Icons/cplusplus.png" alt="C++"></div>
+              <div class="box icon"><img src="Icons/spring.png" alt="Spring"></div>
+              <div class="box icon"><img src="Icons/sql.png" alt="SQL"></div>
+            </div>
+          </div>
+        
+          <!-- Switch Button -->
+          <div class="button-container">
+            <button id="switch-button" class="switch-button">Switch</button>
+          </div>
+        </div>        
+
+        <div id="projects" class="section">
+          <h2 class="main-heading">Selected Projects</h2>
+          <div class="projects-container">
+              <div class="project-box">
+                  <img src="Icons/ResumAI.png" alt="Project Preview">
+                  <div class="title">ResumAI</div>
+                  <div class="description">
+                      Web application developed to generate feedback on your resume using AI!
+                  </div>
+              </div>
+              <div class="project-box">
+                  <img src="Icons/LingoSnap.png" alt="Project Preview">
+                  <div class="title">LingoSnap</div>
+                  <div class="description">
+                      Project consisting of SnapAR and IOS applications helping people learn new languages through everyday objects!
+                  </div>
+              </div>
+              <div class="project-box">
+                  <img src="Icons/PayrollServiceSystem.png" alt="Project Preview">
+                  <div class="title">Payroll Service System</div>
+                  <div class="description">
+                      Web application developed during internship to manage payroll services for both clients and managers!
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.1.2/dist/confetti.browser.min.js"></script>
+</body>
