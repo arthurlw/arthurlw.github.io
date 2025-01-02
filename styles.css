@@ -25,6 +25,8 @@ body {
     cursor: none;
 }
 
+a {text-decoration: none;}
+
 #cursor-glow {
     position: fixed;
     width: 30px;
@@ -638,6 +640,7 @@ body {
     color: var(--light_gray3);
     margin-top: 10px;
     line-height: 1.5;
+    text-decoration: none;
 }
 
 /* Responsive behavior for smaller screens */

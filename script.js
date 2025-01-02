@@ -5,7 +5,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 function copyEmail() {
-    const email = "youremail@example.com"; // Replace with your email
+    const email = "arthur.l.wigo@gmail.com"; // Replace with your email
     navigator.clipboard.writeText(email).then(() => {
         showToast("Email copied to clipboard!");
     }).catch(err => {
