@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    <nav id="table-of-contents">
+    <nav id="table-of-contents" data-animation-end='{"opacity": "1"}'>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -26,19 +26,21 @@
       <div class="content">
         <div id="about" class="section">
           <div id="about-container">
-            <img class="profile-picture" src="Example.png" alt="Arthur's Profile Picture">
+            <img class="profile-picture" src="Example.png" alt="Arthur's Profile Picture" data-animation-end='{"opacity": "1"}'>
             <div class="about-content">
-                <h2 class="about-title">Hi! I'm Arthur <span class="wave">👋</span></h2>
-                <p class="about-description" style="animation: textEnter2 0.8s cubic-bezier(0.4, 0, 0.2, 1) 3s forwards">Welcome to my corner of the internet!</p>
-                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 5s forwards">Currently studying @ <span class="highlight-gold">UC Berkeley</span></p>
-                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 6s forwards">I'm a computer science student passionate about AI and software engineering. Let’s connect!</p>
-                <ul class="social-links" style="opacity: 0; animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 7s forwards">
+                <h2 class="about-title" data-animation-end='{"opacity": "1"}'>Hi! I'm Arthur <span class="wave">👋</span></h2>
+                <p class="about-description" style="animation: textEnter2 0.8s cubic-bezier(0.4, 0, 0.2, 1) 3s forwards" data-animation-end='{"opacity": "1"}'>Welcome to my corner of the internet!</p>
+                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 5s forwards" data-animation-end='{"opacity": "1"}'>Currently studying @ <span class="highlight-gold">UC Berkeley</span></p>
+                <p class="about-description" style="animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 6s forwards" data-animation-end='{"opacity": "1"}'>I'm a computer science student passionate about AI and software engineering. Let’s connect!</p>
+                <ul class="social-links" style="opacity: 0; animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 7s forwards" data-animation-end='{"opacity": "1"}'>
                     <li><a href="https://www.linkedin.com/in/arthur-wigo-2235062aa/" target="_blank">LinkedIn</a></li>
                     <li><a href="https://github.com/arthurlw" target="_blank">GitHub</a></li>
                     <li><a href="#" onclick="copyEmail()">Email</a></li>
                     <li><a href="Files/ArthurLaureusWigoResume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </div>
+
+            <button id="skip-animations" class="skip-button">Skip Animations</button>
         </div>
         
         </div>

@@ -209,7 +209,7 @@ a {text-decoration: none;}
     }
     to {
         transform: translateY(0) translateX(150px) scale(1); /* Full size and position */
-        opacity: 0.75;
+        opacity: 1;
     }
 }
 
@@ -330,6 +330,34 @@ a {text-decoration: none;}
     to {
         opacity: 0;
     }
+}
+
+/* Skip Animations Link */
+#skip-animations {
+    position: fixed;
+    top: 85%;
+    left: 47%;
+    text-decoration: none;
+    color: var(--light_gray2);
+    background: transparent; /* Remove background */
+    transition: color 0.3s ease;
+    font-size: 0.75rem;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays above other elements */
+    border: none; /* Remove any borders */
+    padding: 0; /* Avoid unnecessary padding */
+    outline: none; /* Remove focus outline */
+    opacity: 0;
+    animation: show 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+}
+
+#skip-animations:hover {
+    color: var(--highlight-gold);
+    text-decoration: underline;
+}
+
+#skip-animations.hidden {
+    display: none;
 }
 
 .confetti {

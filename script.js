@@ -22,6 +22,44 @@ function showToast(message) {
     }, 3000);
 }
 
+document.getElementById('skip-animations').addEventListener('click', () => {
+    const animatedElements = document.querySelectorAll('[data-animation-end]');
+
+    animatedElements.forEach(element => {
+        // Parse final styles from a custom attribute
+        const finalStyles = JSON.parse(element.getAttribute('data-animation-end'));
+        for (const [property, value] of Object.entries(finalStyles)) {
+            element.style[property] = value;
+        }
+        // Stop further animation
+        element.style.animation = 'none';
+    });
+
+    // Hide the "Skip Animations" button
+    document.getElementById('skip-animations').style.display = 'none';
+});
+
+// Select elements
+const skipAnimations = document.getElementById('skip-animations');
+const content = document.querySelector('.content');
+
+// Enable scrolling and hide the skip button when clicked
+skipAnimations.addEventListener('click', () => {
+    content.style.animation = 'none'; // Stop the animation
+    content.style.overflowY = 'scroll'; // Enable scrolling
+    skipAnimations.classList.add('hidden'); // Hide the button
+});
+
+// Auto-hide the skip button after 7 seconds if not clicked
+setTimeout(() => {
+    skipAnimations.classList.add('hidden');
+}, 7000);
+
+// Ensure scrolling is enabled when animations naturally finish
+content.addEventListener('animationend', () => {
+    content.style.overflowY = 'scroll';
+});
+
 function launchConfetti() {
     const end = Date.now() + 2 * 1000; // Confetti duration: 2 seconds
     const colors = ['#FFCB4C', '#DAF7A6', '#33FF57', '#C70039', '#FF33A8', '#F3FF33', '#33FFF3', '#C70039', '#900C3F', '#DAF7A6'];
