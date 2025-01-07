@@ -334,9 +334,9 @@ a {text-decoration: none;}
 
 /* Skip Animations Link */
 #skip-animations {
-    position: fixed;
-    top: 85%;
-    left: 47%;
+    position: absolute;
+    bottom: -250px; 
+    left: 31.5%;
     text-decoration: none;
     color: var(--light_gray2);
     background: transparent; /* Remove background */
