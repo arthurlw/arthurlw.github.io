@@ -74,7 +74,7 @@ a {text-decoration: none;}
     flex-grow: 1;
     padding: 20px;
     height: 100%;
-    animation: enableScroll 8s forwards;
+    /* animation: enableScroll 8s forwards; */
     overflow-y: hidden; 
 }
 
