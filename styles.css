@@ -25,6 +25,39 @@ body {
     cursor: none;
 }
 
+/* Default state - show main content and hide the warning */
+.warning {
+    display: none;
+}
+
+.main-content {
+    display: block;
+}
+
+/* For mobile devices, hide main content and show the warning */
+@media (max-width: 768px) {
+    .warning {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+        z-index: 1000;
+    }
+
+    .main-content {
+        display: none;
+    }
+}
+
 a {text-decoration: none;}
 
 #cursor-glow {

@@ -1,3 +1,19 @@
+window.addEventListener('resize', function() {
+    const warning = document.querySelector('.warning');
+    const mainContent = document.querySelector('.main-content');
+
+    if (window.innerWidth <= 768) {
+        warning.style.display = 'flex';
+        mainContent.style.display = 'none';
+    } else {
+        warning.style.display = 'none';
+        mainContent.style.display = 'block';
+    }
+});
+
+// Initial check on page load
+window.dispatchEvent(new Event('resize'));
+
 const cursorGlow = document.getElementById("cursor-glow");
 
 document.addEventListener("mousemove", (e) => {
