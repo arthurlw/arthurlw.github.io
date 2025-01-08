@@ -31,11 +31,20 @@ body {
 }
 
 .main-content {
+    width: 100vw;
+    height: 100vh;
     display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensures no scrollbars appear unnecessarily */
+    margin: 0; /* Removes any default margin */
+    padding: 0; /* Removes any default padding */
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
 }
 
 /* For mobile devices, hide main content and show the warning */
-@media (max-width: 768px) {
+@media (max-width: 1092px) {
     .warning {
         display: block;
         position: fixed;

@@ -2,7 +2,7 @@ window.addEventListener('resize', function() {
     const warning = document.querySelector('.warning');
     const mainContent = document.querySelector('.main-content');
 
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1092) {
         warning.style.display = 'flex';
         mainContent.style.display = 'none';
     } else {
