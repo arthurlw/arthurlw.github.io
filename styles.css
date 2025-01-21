@@ -19,11 +19,16 @@ body {
     background-color: var(--black);
     color: var(--white);
     display: flex;
-    justify-content: space-between;
-    height: 100vh;
-    overflow: hidden;
+    justify-content: center; /* Centers direct child */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Ensure no default browser margins */
+    padding: 0; /* Ensure no default browser paddings */
+    box-sizing: border-box;
+    overflow: hidden; /* Optional: remove scrollbars */
     cursor: none;
 }
+
 
 /* Default state - show main content and hide the warning */
 .warning {
@@ -203,9 +208,10 @@ a {text-decoration: none;}
 }
 
 #about-container {
-    position: absolute;
-    top: 40%;
-    left: 20%;
+    position: absolute; /* You can also use 'relative' if not positioning within a parent */
+    top: 45%; /* Center vertically */
+    left: calc(50% + 150px); /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset by 50% of the width and height */
     width: 80%;
     max-width: 1200px;
     height: auto;
@@ -216,6 +222,7 @@ a {text-decoration: none;}
     padding: 20px;
     box-sizing: border-box;
 }
+
 
 /* Profile Picture Styling */
 .profile-picture {
